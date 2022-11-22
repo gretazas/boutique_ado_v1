@@ -3,6 +3,7 @@ from .models import Product
 from django.db.models import Q
 from django.contrib import messages
 from .models import Product, Category
+from django.db.models.functions import Lower
 
 
 def all_products(request):
@@ -54,8 +55,13 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
+
 def product_detail(request, product_id):
     """ View individual product detail """
     product = get_object_or_404(Product, pk=product_id)
 
-    return render(request, 'products/product_detail.html', {'product': product} )
+    return render(
+        request,
+        'products/product_detail.html',
+        {'product': product}
+        )
