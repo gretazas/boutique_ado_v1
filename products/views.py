@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import Product
 from django.db.models import Q
 from django.contrib import messages
 from .models import Product, Category
