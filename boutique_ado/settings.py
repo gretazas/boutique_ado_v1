@@ -26,8 +26,15 @@ SECRET_KEY = 'django-insecure-+&@s#2i68!0ccqvvk1^f&*5a5vfgb4wewms&1f)+!mwylybkuc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-gretazas-boutiqueadov1-6t17qnb8rvj.ws-eu101.gitpod.io', 'localhost']
 
+PAPERLESS_CSRF_TRUSTED_ORIGINS = [
+                'http://127.0.0.1:8000/',
+                        ]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-gretazas-boutiqueadov1-6t17qnb8rvj.ws-eu101.gitpod.io'
+]
 
 # Application definition
 
